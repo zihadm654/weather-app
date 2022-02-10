@@ -30,8 +30,8 @@ const displayData =(data)=>{
    humidityPercentage.innerText = "Humidity: "+humidity +"%"
    Status.innerText = "Status: " + main
    tempIcon.src = `https://openweathermap.org/img/wn/${icon}.png`
-   temperature.innerText = `${temp} °C`
-   speedRef.innerText = "Wind: "+speed
+   temperature.innerText = `${(temp-273.15).toFixed()} °C`
+   speedRef.innerText = "Wind speed: "+ speed + " km/h"
 }
 const getSearch = ()=>{
    fetchData(input.value)
